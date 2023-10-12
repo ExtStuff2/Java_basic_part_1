@@ -1,4 +1,4 @@
-public class HW_2 {
+public class HW2 {
     //Task_2_2_1
     //one line
     //Task_2_2_2

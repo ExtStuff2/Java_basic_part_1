@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
-
-public class HW_3_2 {
+public class HW3_2 {
     public static void main(String[] args) {
         //Task_3_2
         double a;

@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class HW_3 {
+public class HW3 {
     public static void main(String[] args) {
         //Task_3_1
         String flowersName = "Roses";

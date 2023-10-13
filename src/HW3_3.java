@@ -11,11 +11,11 @@ public class HW3_3 {
 
         //Explicit casting example
         //double -> float -> long -> int -> short -> byte
-        double ab = 1.0;
-        float bc = (float) ab;
-        long cd = (long) bc;
-        int de = (int) cd;
-        short ef = (short) de;
-        byte fg = (byte) ef;
+        double aB = 1.0;
+        float bC = (float) aB;
+        long cD = (long) bC;
+        int dE = (int) cD;
+        short eF = (short) dE;
+        byte fG = (byte) eF;
     }
 }

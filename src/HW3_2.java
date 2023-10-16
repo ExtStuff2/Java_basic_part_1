@@ -5,9 +5,9 @@ public class HW3_2 {
         a =1; a = 2;
         final double PI = Math.PI, G = 9.81; final String CITY = "Almaty";
         byte byte_ = 1; short short_ = 1; int int_ = 1; long long_ = 1; double double_ = 1; float float_ = 1; boolean bool_ = true;  char char_ = 'C'; String string_ = "String";
-        System.out.println(String.valueOf(byte_) +" " + String.valueOf(short_) + " " + Integer.toString(int_) + " " + Double.toString(double_)
-        + " " + Float.toString(float_) + " " + Boolean.toString(bool_) + " " + char_ + " " + string_
-        + "\n" + Double.toString(a)
-        + "\n" + Double.toString(PI) + " " + Double.toString(G) + " " + CITY);
+        System.out.println(byte_ +" " + short_ + " " + int_ + " " + double_ +
+                " " + float_ + " " + bool_ + " " + char_ + " " + string_ +
+                "\n" + a +
+                "\n" + PI + " " + G + " " + CITY);
     }
 }

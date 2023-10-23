@@ -2,8 +2,10 @@ public class HW5A {
     //hw 5 additional task 1 etc
     public void task5A1(int number)
     {
-        if (number%2==0) System.out.println("Your number ->> " + number + " is even");
-        else System.out.println("Your number ->> " + number + " is odd");
+        if (number%2==0)
+            System.out.println("Your number ->> " + number + " is even");
+        else
+            System.out.println("Your number ->> " + number + " is odd");
     }
     public void task5A2(int number1, int number2)
     {
@@ -15,10 +17,14 @@ public class HW5A {
         boolean leap = false;
         if (year % 4 == 0) {
             if (year % 100 == 0) {
-                if (year % 400 == 0) leap = true;
-                else leap = false;
-            } else leap = true;
-        } else leap = false;
+                if (year % 400 == 0)
+                    leap = true;
+                else
+                    leap = false;
+            } else
+                leap = true;
+        } else
+            leap = false;
         System.out.println("Year ->>" + year + " leap year ->> " + leap);
 
     }
@@ -82,7 +88,7 @@ public class HW5A {
         //task 5 a 2
         hw5A.task5A2(4,3);
         //task 5 a 3
-        hw5A.task5A3(2043);
+        hw5A.task5A3(2049);
         //task 5 a 4
         hw5A.task5A4(1);
         //task 5 a 5

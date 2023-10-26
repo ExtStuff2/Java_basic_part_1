@@ -4,60 +4,96 @@ import java.util.List;
 public class HW5 {
     public void squareCheck(int length, int width)
     {
-        if(length==width)
-        {System.out.println("Length ->> " + length + " == " + "Width ->> " + width + " ->> it is square");}
-        else
-        {System.out.println("It isn't square");}
+        if (length == width) {
+            System.out.println("Length ->> " + length + " == " + "Width ->> " + width + " ->> it is square");
+        } else {
+            System.out.println("It isn't square");
+        }
     }
     public void discountCalc(int price) {
         if(price > 4999)
-        {System.out.println(" Your price bigger than 5000 or equal ->> " + price + " you get a 10% discount, your final price ->> " + (price - price*0.1) );}
+        {
+            System.out.println(" Your price bigger than 5000 or equal ->> " + price + " you get a 10% discount, your final price ->> " + (price - price*0.1) );
+        }
         else if(price>=0)
-        {System.out.println(" Your final price is ->> " + price);}
+        {
+            System.out.println(" Your final price is ->> " + price);
+        }
         else
-        {System.out.println("Price must be positive");}
+        {
+            System.out.println("Price must be positive");
+        }
     }
 
     public void giveMeLetterGrade(int gradeNumber) {
         char gradeLetter;
+
         if (gradeNumber<81 && gradeNumber>59)
-        {System.out.println("Your grade number ->> " + gradeNumber + " your grade letter ->> " + (gradeLetter='B'));}
-        else if (gradeNumber>80)
-        {System.out.println("Your grade number ->> " + gradeNumber + " your grade letter ->> " + (gradeLetter='A'));}
+        {
+            System.out.println("Your grade number ->> " + gradeNumber + " your grade letter ->> " + (gradeLetter='B'));
+        }
+        else if (gradeNumber>80 && gradeNumber<101)
+        {
+            System.out.println("Your grade number ->> " + gradeNumber + " your grade letter ->> " + (gradeLetter='A'));
+        }
         else if (gradeNumber<61 && gradeNumber>49)
-        {System.out.println("Your grade number ->> " + gradeNumber + " your grade letter ->> " + (gradeLetter='C'));}
+        {
+            System.out.println("Your grade number ->> " + gradeNumber + " your grade letter ->> " + (gradeLetter='C'));
+        }
         else if (gradeNumber<49 && gradeNumber>44)
-        {System.out.println("Your grade number ->> " + gradeNumber + " your grade letter ->> " + (gradeLetter='D'));}
+        {
+            System.out.println("Your grade number ->> " + gradeNumber + " your grade letter ->> " + (gradeLetter='D'));
+        }
         else if (gradeNumber<46 && gradeNumber>24)
-        {System.out.println("Your grade number ->> " + gradeNumber + " your grade letter ->> " + (gradeLetter='E'));}
-        else if (gradeNumber<25)
-        {System.out.println("Your grade number ->> " + gradeNumber + " your grade letter ->> " + (gradeLetter='F'));}
+        {
+            System.out.println("Your grade number ->> " + gradeNumber + " your grade letter ->> " + (gradeLetter='E'));
+        }
+        else if (gradeNumber<25 && gradeNumber>0)
+        {
+            System.out.println("Your grade number ->> " + gradeNumber + " your grade letter ->> " + (gradeLetter='F'));
+        }
+        else if(gradeNumber<0 || gradeNumber>100)
+        {
+            System.out.println("Your grade number ->> " + gradeNumber + " out of bounds for letter grading, enter correct number from 0 to 100");
+        }
     }
 
-    public void getReverseArgument(int positiveNumber)
+    public String getReverseArgument(String positiveNumber)
     {
+//        String positiveNumberString = "";
+//        for (int i = 0;i < Integer.toString(positiveNumber).length(); i++)
+//        {
+//            positiveNumberString = positiveNumberString + Integer.toString(positiveNumber).charAt(Integer.toString(positiveNumber).length()-(i+1));
+//
+//        }
+//        System.out.println("Your number is ->> " + positiveNumber + " in reverse ->> " + positiveNumberString);
         String positiveNumberString = "";
-        for (int i = 0;i < Integer.toString(positiveNumber).length(); i++)
+        for (int i = 0;i < positiveNumber.length(); i++)
         {
-            positiveNumberString = positiveNumberString + Integer.toString(positiveNumber).charAt(Integer.toString(positiveNumber).length()-(i+1));
+            positiveNumberString = positiveNumberString + positiveNumber.charAt(positiveNumber.length()-(i+1));
 
         }
         System.out.println("Your number is ->> " + positiveNumber + " in reverse ->> " + positiveNumberString);
+
+        return positiveNumberString;
 
     }
     public boolean primeCheck(int numberForCheck)
     {
         boolean check = false;
+
         for (int i = 2; i <= numberForCheck / 2; ++i) {
             if (numberForCheck % i == 0) {
                 check = true;
                 break;
             }
         }
-        if (!check)
-        {System.out.println(numberForCheck + " is a prime number.");}
-        else
-        {System.out.println(numberForCheck + " not a prime number.");}
+        if (!check) {
+            System.out.println(numberForCheck + " is a prime number.");
+        }
+        else {
+            System.out.println(numberForCheck + " not a prime number.");
+        }
         return check;
     }
     public void printThisMsg(String msg)
@@ -163,6 +199,7 @@ public class HW5 {
 
     public void getMySalary(double salary, char rank){
         double bonus = 0;
+
         if(salary>=0) {
             if (rank == 'A') {
                 bonus = 0.5;
@@ -208,6 +245,7 @@ public class HW5 {
     }
     public static void main(String[] args) {
         HW5 hw5 = new HW5();
+
         //task 5_1
         hw5.squareCheck(2, 2);
         //task 5_2
@@ -215,7 +253,7 @@ public class HW5 {
         //task 5_3
         hw5.giveMeLetterGrade(60);
         //task 5_4
-        hw5.getReverseArgument(12345);
+        hw5.getReverseArgument(Integer.toString(12345));
         //task 5_5
         hw5.primeCheck(5);
         //task 5_6

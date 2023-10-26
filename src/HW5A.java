@@ -9,12 +9,14 @@ public class HW5A {
     }
     public void task5A2(int number1, int number2)
     {
+
         System.out.println("Number1 " + number1 + " is bigger than number2 " + number2 + "->>" + (number1 > number2)
                 + "\n" + "Number1 " + number1 + " is smaller than number2 " + number2 + "->>" + (number1 < number2)
                 + "\n" + "Number1 " + number1 + " is equal to number2 " + number2 + "->>" + (number1 == number2));
     }
     public void task5A3(int year) {
         boolean leap = false;
+
         if (year % 4 == 0) {
             if (year % 100 == 0) {
                 if (year % 400 == 0)

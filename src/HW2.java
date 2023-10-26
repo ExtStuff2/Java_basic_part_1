@@ -8,7 +8,9 @@ public class HW2 {
      */
     //Task_2_2_3
     public static void main(String[] args) {
+
         System.out.println("Hello world! New start initiated...");
+
     }
 
 }

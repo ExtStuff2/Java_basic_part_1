@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class HW6 {
+public class HW6 extends HW5 {
     public float getAverageValue(int[] array) {
         float averageValue = 0;
 
@@ -22,7 +22,7 @@ public class HW6 {
         for (int i = 0; i < array.length; i++) {
             for (int j = i + 1; j < array.length; j++) {
                 if (array[i] == array[j])
-                    duplicates += ", " + array[j];
+                    duplicates += array[j] + ",";
             }
         }
         return duplicates;
@@ -101,7 +101,6 @@ public class HW6 {
 
     public String getMaxSorted(int[] array) {
         int[] sortedArray = getBubbleSort(array);
-        HW5 hw5 = new HW5();
 
         String result = Arrays.toString(sortedArray)
                 .replace(",", "")
@@ -109,11 +108,10 @@ public class HW6 {
                 .replace("]", "")
                 .replace(" ", "");
 
-        return hw5.getReverseArgument(result);
+        return getReverseArgument(result);
     }
 
-    //Let's open a new dimension
-    public int[][] getRowColumChange(int[][] array) {
+    public int[][] getRowColumnChange(int[][] array) {
         int[][] resultArray = new int[array[0].length][array.length];
 
         for (int i = 0; i < array.length; i++) {
@@ -161,6 +159,8 @@ public class HW6 {
 
     public void getMinMaxVersion(int[][] array) {
         int arrayLength = 0;
+        String allValues = "";
+        String[] allValuesStr;
 
         for (int i = 0; i < array.length; i++) {
             arrayLength += array[i].length;
@@ -168,13 +168,16 @@ public class HW6 {
 
         int[] oneDVersion = new int[arrayLength];
 
-        for (int k = 0; k < 1; k++) {
-            for (int i = 0; i < array[k].length; i++) {
-                oneDVersion[i] = array[k][i];
-                for (int j = 0; j < array[k + 1].length; j++) {
-                    oneDVersion[array[k].length + j] = array[k + 1][j];
-                }
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                allValues += array[i][j] + " ";
             }
+        }
+
+        allValuesStr = allValues.split(" ");
+
+        for (int i = 0; i < oneDVersion.length; i++) {
+            oneDVersion[i] = Integer.parseInt(allValuesStr[i]);
         }
         oneDVersion = getBubbleSort(oneDVersion);
         System.out.println("Min value ->> " + oneDVersion[0] + " max value ->> " + oneDVersion[oneDVersion.length - 1]);
@@ -214,9 +217,9 @@ public class HW6 {
         System.out.println(hw6.getMaxSorted(new int[]{1, 2, 3, 0, 4, 6}));
 
         //task 6_9
-        System.out.println(Arrays.deepToString(hw6.getRowColumChange(new int[][]{{10, 20, 30}, {40, 50, 60}})));
+        System.out.println(Arrays.deepToString(hw6.getRowColumnChange(new int[][]{{10, 20, 30}, {40, 50, 60}})));
 
-        System.out.println(Arrays.deepToString(hw6.getRowColumChange(new int[][]{{4, 2, 1}, {2, 7, 2}})));
+        System.out.println(Arrays.deepToString(hw6.getRowColumnChange(new int[][]{{4, 2, 1}, {2, 7, 2}})));
 
         //task 6_10
         System.out.println("Sum ->> " + hw6.getArraySum(new int[][]{{10, 20, 30}, {40, 50, 60}}));
@@ -226,7 +229,7 @@ public class HW6 {
 
         System.out.println("Your array is square ->> " + hw6.isArraySquare(new int[][]{{10, 20}, {40, 50}}));
 
-        //task 6_13
+        //task 6_12
         System.out.println(Arrays.deepToString(hw6.getMultiplicationTable(5)));
 
         //task 6_13

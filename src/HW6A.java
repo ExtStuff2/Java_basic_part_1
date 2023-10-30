@@ -105,6 +105,15 @@ public class HW6A extends HW6 {
             resultArraySecond[Integer.parseInt(duplicatesLengthArrayIndex[i])] = array[Integer.parseInt(duplicatesNewIndexArray[i])];
         }
 
+        //sort array values
+        for(int i=0;i<resultArraySecond.length;i++)
+        {
+            if(resultArraySecond[i].length>1)
+            {
+                resultArraySecond[i] = getBubbleSort(resultArraySecond[i]);
+            }
+        }
+
         return resultArraySecond;
     }
 
@@ -197,7 +206,7 @@ public class HW6A extends HW6 {
                 {50},
                 {80},
                 {10, 20, 30, 20, 10},
-                {40, 50}})));
+                {50, 40}})));
         //task 6 a 6
         System.out.println("Is this matrix symmetric ->> " + hw6A.getMatrixSymmetry(new int[][]{
                 {1, 2, -1},

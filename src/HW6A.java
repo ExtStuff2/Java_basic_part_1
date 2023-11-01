@@ -106,10 +106,8 @@ public class HW6A extends HW6 {
         }
 
         //sort array values
-        for(int i=0;i<resultArraySecond.length;i++)
-        {
-            if(resultArraySecond[i].length>1)
-            {
+        for (int i = 0; i < resultArraySecond.length; i++) {
+            if (resultArraySecond[i].length > 1) {
                 resultArraySecond[i] = getBubbleSort(resultArraySecond[i]);
             }
         }

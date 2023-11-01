@@ -1,19 +1,19 @@
 public class HW5A {
     //hw 5 additional task 1 etc
-    public void getEvenOdd(int number)
-    {
-        if (number%2==0)
+    public void getEvenOdd(int number) {
+        if (number % 2 == 0)
             System.out.println("Your number ->> " + number + " is even");
         else
             System.out.println("Your number ->> " + number + " is odd");
     }
-    public void getBiggerNumber(int number1, int number2)
-    {
+
+    public void getBiggerNumber(int number1, int number2) {
 
         System.out.println("Number1 " + number1 + " is bigger than number2 " + number2 + "->>" + (number1 > number2)
                 + "\n" + "Number1 " + number1 + " is smaller than number2 " + number2 + "->>" + (number1 < number2)
                 + "\n" + "Number1 " + number1 + " is equal to number2 " + number2 + "->>" + (number1 == number2));
     }
+
     public void getLeapYear(int year) {
         boolean leap = false;
 
@@ -30,35 +30,37 @@ public class HW5A {
         System.out.println("Year ->>" + year + " leap year ->> " + leap);
 
     }
+
     public void getWeekDay(int day) {
         String dayOfWeek = "";
         switch (day) {
             case 1:
-                dayOfWeek="Monday";
+                dayOfWeek = "Monday";
                 break;
             case 2:
-                dayOfWeek="Tuesday";
+                dayOfWeek = "Tuesday";
                 break;
             case 3:
-                dayOfWeek="Wednesday";
+                dayOfWeek = "Wednesday";
                 break;
             case 4:
-                dayOfWeek="Thursday";
+                dayOfWeek = "Thursday";
                 break;
             case 5:
-                dayOfWeek="Friday";
+                dayOfWeek = "Friday";
                 break;
             case 6:
-                dayOfWeek="Saturday";
+                dayOfWeek = "Saturday";
                 break;
             case 7:
-                dayOfWeek="Sunday";
+                dayOfWeek = "Sunday";
                 break;
             default:
                 System.out.println("Type number from 1 to 7");
         }
         System.out.println(dayOfWeek);
     }
+
     public void getQuadrant(int xCord, int yCord) {
         if (xCord == 0 && yCord == 0) System.out.println("Point (" + xCord + ";" + yCord + ") lies at the origin");
         else if (xCord > 0 && yCord == 0)
@@ -78,6 +80,7 @@ public class HW5A {
         else if (xCord > 0 && yCord < 0)
             System.out.println("Point (" + xCord + ";" + yCord + ") lies in fourth quadrant");
     }
+
     public void getTriangleType(int a, int b, int c) {
         //all cases
         System.out.println("Triangle with a=" + a + " b=" + b + " c=" + c + "\nis Equilateral (all 3 sides same size) ->> " + (a == b && b == c) +
@@ -90,7 +93,7 @@ public class HW5A {
         //task 5 a 1
         hw5A.getEvenOdd(4);
         //task 5 a 2
-        hw5A.getBiggerNumber(4,3);
+        hw5A.getBiggerNumber(4, 3);
         //task 5 a 3
         hw5A.getLeapYear(2049);
         //task 5 a 4
@@ -98,6 +101,6 @@ public class HW5A {
         //task 5 a 5
         hw5A.getQuadrant(1, -1);
         //task 5 a 6
-        hw5A.getTriangleType(4,2,3);
+        hw5A.getTriangleType(4, 2, 3);
     }
 }

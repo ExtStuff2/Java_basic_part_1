@@ -22,8 +22,7 @@ public class HW6 extends HW5 {
         for (int i = 0; i < array.length; i++) {
             for (int j = i + 1; j < array.length; j++) {
                 if (array[i] == array[j]) {
-                    if(!duplicates.contains(Integer.toString(array[i])))
-                    {
+                    if (!duplicates.contains(Integer.toString(array[i]))) {
                         duplicates += array[j] + ",";
                     }
                 }
@@ -194,7 +193,7 @@ public class HW6 extends HW5 {
         System.out.println(hw6.getAverageValue(new int[]{1, 3, 4, 1, 5, 5}));
 
         //task 6_2
-        System.out.println("Duplicates ->> " + hw6.getArrayDuplicates(new int[]{1, 3, 4, 1, 5, 5,5,5}));
+        System.out.println("Duplicates ->> " + hw6.getArrayDuplicates(new int[]{1, 3, 4, 1, 5, 5}));
 
         //task 6_3
         System.out.println(hw6.getNumberOccurrence(new int[]{1, 3, -6, 23, 14, 2}, 23));

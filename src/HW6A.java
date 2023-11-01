@@ -199,7 +199,7 @@ public class HW6A extends HW6 {
         System.out.println("From min to max ->> " + Arrays.deepToString(hw6A.getSortedElem(new int[][]{
                 {10, 20, 30},
                 {10, 20, 50},
-                {10, 20, 30, 20},
+                {10, 20, 30, 20, 20, 20},
                 {10, 20, 30, 80},
                 {10},
                 {40},

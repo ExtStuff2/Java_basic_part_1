@@ -2,7 +2,7 @@ public class HW3_2 {
     public static void main(String[] args) {
         //Task_3_2
         double a;
-        a =1;
+        a = 1;
         a = 2;
         final double PI = Math.PI, G = 9.81;
         final String CITY = "Almaty";
@@ -15,7 +15,7 @@ public class HW3_2 {
         boolean bool_ = true;
         char char_ = 'C';
         String string_ = "String";
-        System.out.println(byte_ +" " + short_ + " " + int_ + " " + double_ +
+        System.out.println(byte_ + " " + short_ + " " + int_ + " " + double_ +
                 " " + float_ + " " + bool_ + " " + char_ + " " + string_ +
                 "\n" + a +
                 "\n" + PI + " " + G + " " + CITY);

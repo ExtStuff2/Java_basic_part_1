@@ -3,12 +3,23 @@ public class HW7 extends HW6 {
     public int getVowelsNum(String str) {
         int count = 0;
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i'
-                    || str.charAt(i) == 'o' || str.charAt(i) == 'u') {
+            if ((str.charAt(i) == 'a' || str.charAt(i) == 'A')
+                    || (str.charAt(i) == 'e' || str.charAt(i) == 'E')
+                    || (str.charAt(i) == 'i' || str.charAt(i) == 'I')
+                    || (str.charAt(i) == 'o' || str.charAt(i) == 'O')
+                    || (str.charAt(i) == 'u' || str.charAt(i) == 'U')) {
                 count++;
             }
         }
         return count;
+    }
+
+    public boolean isAllVowels(String str) {
+        boolean result = false;
+        if (getVowelsNum(str) == str.length()) {
+            result = true;
+        }
+        return result;
     }
 
     public int getWordsNum(String str) {
@@ -56,8 +67,10 @@ public class HW7 extends HW6 {
         //Task 7 5
         System.out.println("Number of occurrences 2 in num ->>" + hw7.getNumberOfTwo(1254212));
         //Task 7 6
-        System.out.println(("Pentagon area ->> " + hw7.getPentagonArea(5, 6)));
+        System.out.println("All vowels ->>" + hw7.isAllVowels("AIEEE"));
         //Task 7 7
+        System.out.println(("Pentagon area ->> " + hw7.getPentagonArea(5, 6)));
+        //Task 7 8
         System.out.println("Num sum ->> " + hw7.getNumSum(252));
     }
 }

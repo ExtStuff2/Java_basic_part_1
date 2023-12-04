@@ -30,7 +30,16 @@ public class Main {
         Movie instance1 = new Movie("Focus", "RatPac...", "R");
         Movie instance2 = new Movie("Another name", "20th Century...");
 
-        System.out.println("Static == same for all ->> " + instance1.getAll().equals(instance2.getAll()));
+        //Task 8_2 1
+        System.out.println("Static == same for all ->> " + instance1.equals(instance2));
+        System.out.println("New hashcode ->>" + instance1.hashCode());
+
+        //deep clone
+        System.out.println(instance1.clone() == instance1);
+        //shallow clone
+        Movie instance3 = instance1;
+        System.out.println(instance3 == instance1);
+
     }
 
 }

@@ -15,9 +15,24 @@ public class Movie {
         Movie.rating = "PG";
     }
 
-    public String getAll() {
+    @Override
+    public String toString() {
         return Movie.title + " " + Movie.studio + " " + Movie.rating;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        Movie movie = (Movie) obj;
+        return movie.toString().equals(movie.toString());
+    }
 
+    @Override
+    public int hashCode() {
+        return (int) Math.pow(9, this.toString().hashCode());
+    }
+
+    @Override
+    protected Object clone() {
+        return new Movie(title, studio, rating);
+    }
 }

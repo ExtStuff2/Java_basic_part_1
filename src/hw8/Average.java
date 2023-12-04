@@ -1,9 +1,26 @@
 package hw8;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Average {
     private double sum;
+
+    @Override
+    public boolean equals(Object o) {
+        Average average = (Average) o;
+        return average.sum == sum;
+    }
+
+    @Override
+    public int hashCode() {
+        return (int) Math.pow(16, this.sum);
+    }
+
+    @Override
+    public String toString() {
+        return " " + sum;
+    }
 
     public double getAverage(double[] array) {
         sum = 0;
@@ -21,5 +38,10 @@ public class Average {
     public void printAverage(double[] array) {
         System.out.println("Average custom method ->> " + getAverage(array));
         System.out.println("Average Arrays method ->>" + getAverage(array, true));
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }

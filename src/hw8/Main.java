@@ -36,10 +36,13 @@ public class Main {
 
         //deep clone
         System.out.println(instance1.clone() == instance1);
+
         //shallow clone
         Movie instance3 = instance1;
         System.out.println(instance3 == instance1);
 
+        Average average1 = (Average) average.clone();
+        System.out.println(average1==average);
     }
 
 }

@@ -62,7 +62,7 @@ public class HW4 {
         }
         //if char == 'c' -> from celsius to fahrenheit
         else if (flag == 'c') {
-            System.out.println(" Fahrenheit = (C (" + cels + ") * 1.8000) + 32.00 ->> " + (float) ((cels * 1.8000) + 32.00));
+            System.out.println(" Fahrenheit = (C (" + cels + ") * 1.8000) + 32.00 ->> " + (float) ((cels*1.8000) + 32.00));
         } else {
             System.out.println("flag can be either f for converting from fahrenheit to celsius or c for opposite");
         }

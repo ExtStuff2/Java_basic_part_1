@@ -1,7 +1,6 @@
 package hw8;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 public class Average {
     private double sum;
@@ -41,7 +40,7 @@ public class Average {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+    protected Object clone() {
+        return this;
     }
 }

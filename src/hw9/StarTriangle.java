@@ -1,7 +1,5 @@
 package hw9;
 
-import java.util.Arrays;
-
 public class StarTriangle {
     private int width;
     private String[] triangle;

@@ -3,10 +3,12 @@ package hw9;
 public class Temperature {
     private double degrees;
     private char degreesFlag;
+
     public Temperature() {
         this.degrees = 0;
         this.degreesFlag = 'C';
     }
+
     public Temperature(double degrees) {
         this.degrees = degrees;
         this.degreesFlag = 'C';
